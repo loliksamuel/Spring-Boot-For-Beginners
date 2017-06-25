@@ -1,0 +1,35 @@
+<html>
+<title>Spring Security Example</title>
+<head>
+
+</head>
+<body>
+<h1>Welcome!</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="box col-md-6 col-md-offset-3">
+            <div class="stormpath-header">
+                <img src="http://stormpath.com/images/template/logo-nav.png"/>
+            </div>
+
+            <h1 th:inline="text">Hello, [[${#httpServletRequest.remoteUser}]]! you are logged in. please navigate through website</h1>
+
+
+            <div><a th:href="actuator">http://localhost:8090/actuator</a></div>
+            <div><a th:href="metrics">http://localhost:8090/metrics</a></div>
+                <div><a th:href="welcome">http://localhost:8090/welcome</a></div>
+                    <div><a th:href="users">http://localhost:8090/users/</a></div>
+                        <div><a th:href="users_1">http://localhost:8090/users/1</a></div>
+                            <div><a th:href="users_findByRole_equals_user">http://localhost:8090/users/findByRole=user</a></div>
+                                <div><a th:href="surveys">http://localhost:8090/surveys</a></div>
+                                    <div><a th:href="surveys_Survey1">http://localhost:8090/surveys/Survey1</a></div>
+                                        <div><a th:href="surveys_Survey1_questions"> http://localhost:8090/surveys/Survey1/questions/</a></div>
+                                            <div> <a th:href="surveys_Survey1_questions_Question1">http://localhost:8090/surveys/Survey1/questions/Question1</a></div>
+            <a th:href="@{/logout}" class="btn btn-danger">Logout</a>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
